@@ -1,31 +1,34 @@
 {
-	"name": "com.brennanhatton.discord",
-	"description": "Discorcd Webhooks",
-	"version": "1.2.3",
+	"name": "com.equalreality.reviewai",
+	"description": "Ai Review Scene for Equal Reality & People Tech Revolution Projects",
+	"version": "0.0.0",
 	"unity": "2021.3",
-  	"unityRelease": "16f1",
-	"displayName": "Brennan Hattons Discord Webhooks",
-  	"documentationUrl": "https://github.com/bh679/Unity-Discord-Webhook-Tools",
+  	"unityRelease": "20f1",
+	"displayName": "Equal Reality Review AI",
+  	"documentationUrl": "https://github.com/bh679/Equal-Reality-AI-Review",
   	"licensesUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
 	"author": 
 	{
-		"name": "Brennan Hatton",
-		"url": "https://brennanhatton.com/"
+		"name": "Equal Reality",
+		"url": "https://equalreality.com/"
 	},
 	"dependencies": 
 	{
+		"com.brennanhatton.gpt": "0.0.2",
+		"com.brennanhatton.unitytools": "1:6:2",
+		"com.brennanhatton.discord": "1:2:3"
 	},
 	 "keywords": [
+		"Equal Reality"
 	    "Brennan",
 	    "Hatton",
 	    "Brennan Hatton",
-	    "Discord",
-	    "Webhooks",
-	    "PUN",
-	    "Photon",
-	    "PUN2",
-	    "VR",
-	    "Networking"
+	    "AI",
+	    "Unity",
+	    "Empathy",
+	    "GPT",
+	    "OpenAI",
+	    "VR"
 	  ],
 	"hideInEditor": false
 }
