@@ -1,0 +1,31 @@
+{
+	"name": "com.brennanhatton.discord",
+	"description": "Discorcd Webhooks",
+	"version": "1.2.3",
+	"unity": "2021.3",
+  	"unityRelease": "16f1",
+	"displayName": "Brennan Hattons Discord Webhooks",
+  	"documentationUrl": "https://github.com/bh679/Unity-Discord-Webhook-Tools",
+  	"licensesUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+	"author": 
+	{
+		"name": "Brennan Hatton",
+		"url": "https://brennanhatton.com/"
+	},
+	"dependencies": 
+	{
+	},
+	 "keywords": [
+	    "Brennan",
+	    "Hatton",
+	    "Brennan Hatton",
+	    "Discord",
+	    "Webhooks",
+	    "PUN",
+	    "Photon",
+	    "PUN2",
+	    "VR",
+	    "Networking"
+	  ],
+	"hideInEditor": false
+}
