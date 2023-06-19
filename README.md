@@ -3,6 +3,10 @@ Ai Review Scene for Equal Reality & People Tech Revolution Projects
 
 ## Requirements
 Unity (most recent tested on 2021.3.20f1) <br />
+SpeechBlend<br />
+GPT AI Integration<br />
+
+### Tools Auto Imported
 [Unity GPT Tools](https://github.com/bh679/Unity-GPT-Tools)	<br />
 "com.brennanhatton.unitytools": "1:6:2",<br />
 "com.brennanhatton.discord": "1:2:3"<br />
@@ -29,4 +33,5 @@ Join the [Discord](https://discord.gg/VC8gZ2GNHs "Join Discord server") server t
 
 ## Using
 Section to be written
+ 
  
