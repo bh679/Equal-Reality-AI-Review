@@ -12,12 +12,12 @@
 		"name": "Equal Reality",
 		"url": "https://equalreality.com/"
 	},
-	"dependencies": 
-	{
-		"com.brennanhatton.gpt": "0.0.2",
-		"com.brennanhatton.unitytools": "1.6.2",
-		"com.brennanhatton.discord": "1.2.3"
-	},
+	"dependencies": {
+	    "com.brennanhatton.gpt": "https://github.com/bh679/Unity-GPT-Tools.git#0.0.2",
+	    "com.brennanhatton.unitytools": "https://github.com/bh679/Unity-Tools.git#1.6.2",
+		"com.brennanhatton.discord": "https://github.com/bh679/Unity-Discord-Webhook-Tools.git#1.2.3"
+		},
+
 	 "keywords": [
 		"Equal Reality",
 	    "Brennan",
