@@ -14,8 +14,8 @@ GPT AI Integration<br />
 
 ## Installation
 To install this project as a dependency using the Unity Package Manager,
-Install the requirements.
-Windows -> Package Manager -> '+' -> `add package from git URL...` ->
+Install the requirements. <br/ >
+Windows -> Package Manager -> '+' -> `add package from git URL...` -><br/ >
 ``https://github.com/bh679/Unity-GPT-Tools.git``<br />
 ``https://github.com/bh679/Unity-Tools.git``<br />
 ``https://github.com/bh679/Unity-Discord-Webhook-Tools.git``<br />
