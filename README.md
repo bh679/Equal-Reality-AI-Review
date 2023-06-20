@@ -7,8 +7,8 @@ SpeechBlend<br />
 GPT AI Integration<br />
 
 ### Tools Auto Imported
-[Unity GPT Tools](https://github.com/bh679/Unity-GPT-Tools) - 0.0.2 - <br />
-[Unity Tools](https://github.com/bh679/Unity-Tools) - 1.6.2<br />
+[Unity GPT Tools](https://github.com/bh679/Unity-GPT-Tools) - 0.0.2 - ``https://github.com/bh679/Unity-GPT-Tools.git``<br />
+[Unity Tools](https://github.com/bh679/Unity-Tools) - 1.6.2 - ``https://github.com/bh679/Unity-Tools.git``<br />
 [Unity Discord Webhooks](https://github.com/bh679/Unity-Discord-Webhook-Tools) - 1.2.3 - ``https://github.com/bh679/Unity-Discord-Webhook-Tools.git``<br />
 
 ## License
