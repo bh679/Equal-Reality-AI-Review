@@ -37,5 +37,5 @@ Section to be written
  
  
 ## Documentation
-[AI Review Feature Specifications](https://docs.google.com/document/d/1ccq_VnhZ-AAbUW-jhwOcOB_fO1q0LPr8/edit)
-[EqualReality.AI Dependencies Map](https://docs.google.com/presentation/d/1Y2eK51DfQYKYzhT-jNj3jHkHUAtdsLeV46JADhA2G_E/edit#slide=id.g2528c1e646d_0_17)
+ - [AI Review Feature Specifications](https://docs.google.com/document/d/1ccq_VnhZ-AAbUW-jhwOcOB_fO1q0LPr8/edit)<br />
+ - [EqualReality.AI Dependencies Map](https://docs.google.com/presentation/d/1Y2eK51DfQYKYzhT-jNj3jHkHUAtdsLeV46JADhA2G_E/edit#slide=id.g2528c1e646d_0_17)<br />
