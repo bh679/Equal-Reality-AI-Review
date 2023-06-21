@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EqualReality.AI
+namespace EqualReality.ReviewAI
 {
 	[System.Serializable]
 	public class ReviewQuestion

@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using EqualReality.AI;
 
-namespace BrennanHatton.GPT
+namespace EqualReality.ReviewAI
 {
 	
 	public class ReviewDataToJson : MonoBehaviour

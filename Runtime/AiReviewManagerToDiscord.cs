@@ -6,7 +6,7 @@ using OpenAI.Integrations.ElevenLabs;
 using OpenAI.Integrations.VoiceRecorder;
 using BrennanHatton.Discord;
 
-namespace EqualReality.AI
+namespace EqualReality.ReviewAI
 {
 		
 	public class AiReviewManagerToDiscord : MonoBehaviour

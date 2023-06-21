@@ -6,7 +6,7 @@ using OpenAI.Integrations.ElevenLabs;
 using OpenAI.Integrations.VoiceRecorder;
 using TMPro;
 
-namespace EqualReality.AI
+namespace EqualReality.ReviewAI
 {
 	public class AIReviewUI : MonoBehaviour
 	{

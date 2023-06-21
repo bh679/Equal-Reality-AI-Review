@@ -5,7 +5,7 @@ using OpenAI.DemoScript;
 using OpenAI.Integrations.ElevenLabs;
 using OpenAI.Integrations.VoiceRecorder;
 
-namespace EqualReality.AI
+namespace EqualReality.ReviewAI
 {
 	public class AiAnimationController : MonoBehaviour
 	{

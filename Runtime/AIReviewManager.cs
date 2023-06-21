@@ -8,7 +8,7 @@ using OpenAI.Integrations.ElevenLabs;
 using OpenAI.Integrations.VoiceRecorder;
 using BrennanHatton.GPT;
 
-namespace EqualReality.AI
+namespace EqualReality.ReviewAI
 {
 	
 
