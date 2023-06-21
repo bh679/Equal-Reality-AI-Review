@@ -1,0 +1,21 @@
+{
+    "name": "EqualReality.ReviewAI",
+    "rootNamespace": "EqualReality.ReviewAI",
+    "references": [
+        "DiscordWebhooks",
+        "GPT Tools",
+        "BrennanHattonUnityTools",
+        "SpeechBlendDef",
+        "openai.api.unity",
+        "GPTAIIntergration"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
