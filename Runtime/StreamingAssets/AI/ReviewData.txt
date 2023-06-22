@@ -1,0 +1,16 @@
+{
+    "intro": "You’ve just experienced an everyday workplace scenario from the perspective of Tamara. Take a moment to reflect and think about the following questions...",
+    "reviewQuestions": [
+        {
+            "Question": "how did that feel?"
+        },
+        {
+            "Question": "Do you think your colleagues were inclusive?"
+        },
+        {
+            "Question": "What could they have done differently?"
+        }
+    ],
+    "conclusion": "thanks again for taking the time to take this experience and practise inclusive behaviour. TO learn more, try and new experience or run this one again. To exit, take off the headset.",
+    "comments": 0
+}
