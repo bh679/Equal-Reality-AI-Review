@@ -22,14 +22,14 @@ namespace EqualReality.ReviewAI
 	/// A UnityEvent with a Grabbable as the parameter
 	/// </summary>
 	[System.Serializable]
-	public class AIResetEvent : UnityEvent<OpenAIDemo, VoiceRecorder, ELSpeaker> { }
+	public class AIResetEvent : UnityEvent<OpenAIDemo_Ext, VoiceRecorder_Ext, ELSpeaker> { }
 
 	public class AIReviewManager : MonoBehaviour
 	{
 		
-		public OpenAIDemo aiPrefab;
-		OpenAIDemo gpt;
-		VoiceRecorder voice;
+		public OpenAIDemo_Ext aiPrefab;
+		OpenAIDemo_Ext gpt;
+		VoiceRecorder_Ext voice;
 		ELSpeaker elSpeaker;
 		ReviewData reviewData;
 		
@@ -62,8 +62,8 @@ namespace EqualReality.ReviewAI
 		
 		void Reset()
 		{
-			gpt = GameObject.FindObjectOfType<OpenAIDemo>();
-			voice = GameObject.FindObjectOfType<VoiceRecorder>();
+			gpt = GameObject.FindObjectOfType<OpenAIDemo_Ext>();
+			voice = GameObject.FindObjectOfType<VoiceRecorder_Ext>();
 		}
 		
 		int loaded = 0;
@@ -137,7 +137,7 @@ namespace EqualReality.ReviewAI
 			gpt.onSendGPT.AddListener(SaveSentData);
 			gpt.onRecieveResponse.AddListener(SaveReceivedData);
 			
-			voice = gpt.GetComponent<VoiceRecorder>();
+			voice = gpt.GetComponent<VoiceRecorder_Ext>();
 			
 			
 			elSpeaker = gpt.GetComponent<ELSpeaker>();

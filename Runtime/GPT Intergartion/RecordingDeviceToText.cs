@@ -5,7 +5,7 @@ using OpenAI.Integrations.ElevenLabs;
 
 public class RecordingDeviceToText : MonoBehaviour
 {
-	public VoiceRecorder vr;
+	public VoiceRecorder_Ext vr;
 	public TMPro.TMP_Text text;
 	public AudioSource source;
 

@@ -5,7 +5,7 @@ using OpenAI.Integrations.ElevenLabs;
 
 public class LoudnessToHeight : MonoBehaviour
 {
-	public VoiceRecorder vr;
+	public VoiceRecorder_Ext vr;
 
 	float y = 0;
 	// Update is called once per frame

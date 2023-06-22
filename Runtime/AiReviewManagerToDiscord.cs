@@ -20,7 +20,7 @@ namespace EqualReality.ReviewAI
 			discord = GameObject.FindObjectOfType<DiscordLogManager>();
 		}
 		
-		void SetListerners(OpenAIDemo openAi, VoiceRecorder _voice, ELSpeaker _elSpeaker)
+		void SetListerners(OpenAIDemo_Ext openAi, VoiceRecorder_Ext _voice, ELSpeaker _elSpeaker)
 		{
 			openAi.onRecieveResponse.AddListener(discord.SendWebhook);
 			openAi.onSendGPT.AddListener(discord.SendWebhook);
