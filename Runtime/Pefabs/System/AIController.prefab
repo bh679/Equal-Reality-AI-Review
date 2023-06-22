@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4533479904916840190}
   - component: {fileID: 4533479904916840191}
   - component: {fileID: 4533479904916840188}
-  - component: {fileID: 4533479904916840189}
-  - component: {fileID: 4533479904916840186}
+  - component: {fileID: 4087994199129114669}
+  - component: {fileID: 6150223886561661392}
+  - component: {fileID: 8222386602934104466}
   m_Layer: 0
   m_Name: AIController
   m_TagString: Untagged
@@ -245,27 +246,10 @@ MonoBehaviour:
   completer: {fileID: 8276447874429322686}
   recordingLength: 10
   recordingThreshold: 0.8
-  recordingTimeUtterancesThreshold: 2
   recordingTimeThreshold: 2
   sensitivity: 100
   loudness: 0
-  voiceMessages: []
-  vmId: 0
-  onMicMonitor:
-    m_PersistentCalls:
-      m_Calls: []
-  onMicRecording:
-    m_PersistentCalls:
-      m_Calls: []
-  onUtterence:
-    m_PersistentCalls:
-      m_Calls: []
-  onMicStopped:
-    m_PersistentCalls:
-      m_Calls: []
-  onStart: 0
-  micDeviceName: 
---- !u!114 &4533479904916840189
+--- !u!114 &4087994199129114669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,10 +258,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4533479904916840187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a62cb1632c8e6d14cb4f40c40c011667, type: 3}
+  m_Script: {fileID: 11500000, guid: a6164c981e3f94e949d01855625217a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useAudioStreaming: 0
+  useAudioStreaming: 1
   responsePlaying: 0
   ELAuth: {fileID: 11400000, guid: d91e960e5d74c384f837cd0b40448f51, type: 2}
   textInput: {fileID: 0}
@@ -295,7 +279,7 @@ MonoBehaviour:
   onFinishPlayingVoice:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4533479904916840186
+--- !u!114 &6150223886561661392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,7 +288,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4533479904916840187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7aa9f83238e7384aa0d47fdcd61678f, type: 3}
+  m_Script: {fileID: 11500000, guid: bcad4e6078f0049b3a3db3a3095af99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   completer: {fileID: 8276447874429322686}
@@ -312,8 +296,8 @@ MonoBehaviour:
   prompt: {fileID: 0}
   response: {fileID: 0}
   prompWrapper:
-    prePrompt: '{'
-    postPrompt: '}'
+    prePrompt: 
+    postPrompt: 
     prePrompt2: []
     postPrompt2: []
     prePromptText: []
@@ -335,6 +319,42 @@ MonoBehaviour:
   onFailed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8222386602934104466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533479904916840187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb5094657763f4fbfa8c60419e8d9e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 0}
+  completer: {fileID: 8276447874429322686}
+  recordingLength: 10
+  recordingThreshold: 0.8
+  recordingTimeUtterancesThreshold: 2
+  recordingTimeThreshold: 2
+  sensitivity: 100
+  loudness: 0
+  voiceMessages: []
+  vmId: 0
+  onMicMonitor:
+    m_PersistentCalls:
+      m_Calls: []
+  onMicRecording:
+    m_PersistentCalls:
+      m_Calls: []
+  onUtterence:
+    m_PersistentCalls:
+      m_Calls: []
+  onMicStopped:
+    m_PersistentCalls:
+      m_Calls: []
+  onStart: 0
+  micDeviceName: 
 --- !u!1001 &4533479905182230910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342,68 +362,55 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4533479904916840129}
     m_Modifications:
-    - target: {fileID: 5490449287616113856, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 5490449287616113856, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: Engine
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8905070302076984395, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 8905070302076984395, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_Name
       value: OpenAiCompleterV1
       objectReference: {fileID: 0}
-    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -703.8517
       objectReference: {fileID: 0}
-    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_LocalPosition.y
       value: -357.6228
       objectReference: {fileID: 0}
-    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_LocalPosition.z
       value: 9.037114
       objectReference: {fileID: 0}
-    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-        type: 3}
+    - target: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -411,14 +418,12 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
 --- !u!4 &4756767987785410891 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 9000805303073374261, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
   m_PrefabInstance: {fileID: 4533479905182230910}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &8276447874429322686 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5490449287616113856, guid: f28446e696573d2418d2a68633c4a3b3,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 5490449287616113856, guid: f28446e696573d2418d2a68633c4a3b3, type: 3}
   m_PrefabInstance: {fileID: 4533479905182230910}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
