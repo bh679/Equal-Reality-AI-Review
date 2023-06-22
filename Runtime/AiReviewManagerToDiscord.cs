@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using OpenAI.DemoScript;
-using OpenAI.Integrations.ElevenLabs;
-using OpenAI.Integrations.VoiceRecorder;
+using EqualReality.ReviewAI.GPTAIIntergration;
 using BrennanHatton.Discord;
 
 namespace EqualReality.ReviewAI
@@ -20,7 +18,7 @@ namespace EqualReality.ReviewAI
 			discord = GameObject.FindObjectOfType<DiscordLogManager>();
 		}
 		
-		void SetListerners(OpenAIDemo_Ext openAi, VoiceRecorder_Ext _voice, ELSpeaker _elSpeaker)
+		void SetListerners(OpenAIDemo openAi, VoiceRecorder _voice, ELSpeaker _elSpeaker)
 		{
 			openAi.onRecieveResponse.AddListener(discord.SendWebhook);
 			openAi.onSendGPT.AddListener(discord.SendWebhook);

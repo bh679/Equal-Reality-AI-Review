@@ -10,8 +10,9 @@ using System.Linq;
 using TMPro;
 using BrennanHatton.GPT;
 using UnityEngine.Events;
+using OpenAI.DemoScript;
 
-namespace OpenAI.DemoScript
+namespace EqualReality.ReviewAI.GPTAIIntergration
 {
 
 	/// <summary>
@@ -20,7 +21,7 @@ namespace OpenAI.DemoScript
 	[System.Serializable]
 	public class StringEvent : UnityEvent<string> { }
 	
-	public class OpenAIDemo_Ext : MonoBehaviour
+	public class OpenAIDemo : MonoBehaviour
 	{
 		public List<ChatMessageV1> messages = new List<ChatMessageV1>(); // Used as the chat history for context. If it exceeds the amount of tokens allowed, you'll get an error. * Need to add logic to trim oldest tokens.
         

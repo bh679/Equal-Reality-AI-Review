@@ -10,8 +10,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using OpenAI.DemoScript;
+using OpenAI.Integrations.ElevenLabs;
 
-namespace OpenAI.Integrations.ElevenLabs
+namespace EqualReality.ReviewAI.GPTAIIntergration
 {
 	[System.Serializable]
 	public class Utterence
@@ -71,7 +72,7 @@ namespace OpenAI.Integrations.ElevenLabs
 	}
 	
     [RequireComponent(typeof(AudioSource))]
-    public class VoiceRecorder_Ext : MonoBehaviour
+    public class VoiceRecorder : MonoBehaviour
     {
         public TMP_InputField input; // Displays the transcription text response of the audio sent to the Whisper API
         public OpenAiCompleterV1 completer; // Holds the OpenAI API key settings
@@ -337,7 +338,7 @@ namespace OpenAI.Integrations.ElevenLabs
             	if(input != null) input.text = transcript.Result.text;
             	Debug.Log(transcript.Result.text);
 	            utterence.voiceToText = transcript.Result.text;
-	            OpenAIDemo_Ext openAIDemo = GetComponent<OpenAIDemo_Ext>();
+	            OpenAIDemo openAIDemo = GetComponent<OpenAIDemo>();
 	            await openAIDemo.SendOpenAIRequest(transcript.Result.text);
 	            utterence.responseText = openAIDemo.messages[openAIDemo.messages.Count-1].content;//response.text;
             }

@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
-using OpenAI.DemoScript;
-using OpenAI.Integrations.ElevenLabs;
-using OpenAI.Integrations.VoiceRecorder;
+using EqualReality.ReviewAI.GPTAIIntergration;
 using BrennanHatton.GPT;
 
 namespace EqualReality.ReviewAI
@@ -22,14 +20,14 @@ namespace EqualReality.ReviewAI
 	/// A UnityEvent with a Grabbable as the parameter
 	/// </summary>
 	[System.Serializable]
-	public class AIResetEvent : UnityEvent<OpenAIDemo_Ext, VoiceRecorder_Ext, ELSpeaker> { }
+	public class AIResetEvent : UnityEvent<OpenAIDemo, VoiceRecorder, ELSpeaker> { }
 
 	public class AIReviewManager : MonoBehaviour
 	{
 		
-		public OpenAIDemo_Ext aiPrefab;
-		OpenAIDemo_Ext gpt;
-		VoiceRecorder_Ext voice;
+		public OpenAIDemo aiPrefab;
+		OpenAIDemo gpt;
+		VoiceRecorder voice;
 		ELSpeaker elSpeaker;
 		ReviewData reviewData;
 		
@@ -62,8 +60,8 @@ namespace EqualReality.ReviewAI
 		
 		void Reset()
 		{
-			gpt = GameObject.FindObjectOfType<OpenAIDemo_Ext>();
-			voice = GameObject.FindObjectOfType<VoiceRecorder_Ext>();
+			gpt = GameObject.FindObjectOfType<OpenAIDemo>();
+			voice = GameObject.FindObjectOfType<VoiceRecorder>();
 		}
 		
 		int loaded = 0;
@@ -137,7 +135,7 @@ namespace EqualReality.ReviewAI
 			gpt.onSendGPT.AddListener(SaveSentData);
 			gpt.onRecieveResponse.AddListener(SaveReceivedData);
 			
-			voice = gpt.GetComponent<VoiceRecorder_Ext>();
+			voice = gpt.GetComponent<VoiceRecorder>();
 			
 			
 			elSpeaker = gpt.GetComponent<ELSpeaker>();

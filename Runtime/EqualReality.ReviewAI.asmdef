@@ -6,10 +6,8 @@
         "GPT Tools",
         "BrennanHattonUnityTools",
         "SpeechBlendDef",
-        "openai.api.unity",
-        "GPTAIIntergration",
         "Unity.TextMeshPro",
-        "GPTAIIntergration_Ext"
+        "EqualReality.ReviewAI.GPTAIIntergration"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

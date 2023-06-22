@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using OpenAI.DemoScript;
-using OpenAI.Integrations.ElevenLabs;
-using OpenAI.Integrations.VoiceRecorder;
+using EqualReality.ReviewAI.GPTAIIntergration;
 
 namespace EqualReality.ReviewAI
 {
@@ -11,8 +9,8 @@ namespace EqualReality.ReviewAI
 	{
 		public Animator VRGuideAnimator;
 		SpeechBlend speechBlend;
-		OpenAIDemo_Ext gpt;
-		VoiceRecorder_Ext voice;
+		OpenAIDemo gpt;
+		VoiceRecorder voice;
 		ELSpeaker elSpeaker;
 		
 		void Reset()
@@ -20,7 +18,7 @@ namespace EqualReality.ReviewAI
 			VRGuideAnimator = GameObject.FindFirstObjectByType<Animator>();
 		}
 		
-		public void SetAIRefs(OpenAIDemo_Ext _gpt, VoiceRecorder_Ext _voice, ELSpeaker _elSpeaker)
+		public void SetAIRefs(OpenAIDemo _gpt, VoiceRecorder _voice, ELSpeaker _elSpeaker)
 		{
 			this.gpt = _gpt;
 			this.voice = _voice;
