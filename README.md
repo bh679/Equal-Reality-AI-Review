@@ -5,7 +5,7 @@ Ai Review Scene for Equal Reality & People Tech Revolution Projects
 Unity (most recent tested on 2021.3.20f1) <br />
 [SpeechBlend](https://assetstore.unity.com/packages/tools/animation/speechblend-lipsync-149023) - paid ($14.99)<br />
 [GPT AI Integration](https://assetstore.unity.com/packages/tools/ai/gpt-ai-integration-243729) - paid ($25)<br />
-[CleanFlatIcon](https://assetstore.unity.com/packages/2d/gui/icons/clean-flat-icons-98117) (optional)
+[CleanFlatIcon](https://assetstore.unity.com/packages/2d/gui/icons/clean-flat-icons-98117) (optional) <br />
 [Unity GPT Tools](https://github.com/bh679/Unity-GPT-Tools) - 0.0.2 <br />
 [Unity Tools](https://github.com/bh679/Unity-Tools) - 1.6.2<br />
 [Unity Discord Webhooks](https://github.com/bh679/Unity-Discord-Webhook-Tools) - 1.2.3<br />
