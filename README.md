@@ -20,6 +20,9 @@ Windows -> Package Manager -> '+' -> `add package from git URL...` -> <br />
 ``https://github.com/bh679/Unity-GPT-Tools.git``<br />
 ``https://github.com/bh679/Unity-Tools.git``<br />
 ``https://github.com/bh679/Unity-Discord-Webhook-Tools.git``<br />
+
+ - Import UnityAssets
+
 ```
 https://github.com/bh679/Equal-Reality-AI-Review.git
 ```
@@ -29,6 +32,8 @@ add the following line to your project's `manifest.json`:
 ```
 "com.brennanhatton.discord": "git+https://github.com/bh679/Equal-Reality-AI-Review.git"
 ```
+
+Import Assembly Definions .unitypackage
 
 
 Join the [Discord](https://discord.gg/VC8gZ2GNHs "Join Discord server") server to leave feedback or get support.
