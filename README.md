@@ -17,6 +17,7 @@ Unity (most recent tested on 2021.3.20f1) <br />
 Import UnityAssets (I find this is best done by searching the package manager):
 - [SpeechBlend](https://assetstore.unity.com/packages/tools/animation/speechblend-lipsync-149023)<br />
 - [GPT AI Integration](https://assetstore.unity.com/packages/tools/ai/gpt-ai-integration-243729)<br />
+- [CleanFlatIcon](https://assetstore.unity.com/packages/2d/gui/icons/clean-flat-icons-98117) (optional) <br />
 
 To install this project as a dependency using the Unity Package Manager,
 Install the requirements. <br/ >
