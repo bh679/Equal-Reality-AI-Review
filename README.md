@@ -75,8 +75,30 @@ Setup the reference from the ``AI Manager`` object ``AiAnimationController.cs`` 
 
 Join the [Discord](https://discord.gg/VC8gZ2GNHs "Join Discord server") server to leave feedback or get support.
 
-## Using
-Section to be written
+## Edit Prompts & Script
+
+### Copy Streaming Assets
+Copy Streaming Assets from the package into the Assets at root level 
+<img width="316" alt="Screenshot 2023-06-30 at 4 03 20 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/d5801b54-c953-4b24-a34f-7bd2b77254f6">
+<img width="569" alt="Screenshot 2023-06-30 at 4 04 08 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/0ab906e5-ba10-40d6-86a4-35c9408baef4">
+
+Edit ReviewData.txt
+```{
+    "intro": "You’ve just experienced an everyday workplace scenario from the perspective of Tamara. Take a moment to reflect and think about the following questions...",
+    "reviewQuestions": [
+        {
+            "Question": "how did that feel?"
+        },
+        {
+            "Question": "Do you think your colleagues were inclusive?"
+        },
+        {
+            "Question": "What could they have done differently?"
+        }
+    ],
+    "conclusion": "thanks again for taking the time to take this experience and practise inclusive behaviour. TO learn more, try and new experience or run this one again. To exit, take off the headset.",
+    "comments": 0
+}```
  
  
 ## Documentation
