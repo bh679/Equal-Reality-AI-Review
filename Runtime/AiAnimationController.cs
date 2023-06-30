@@ -26,7 +26,7 @@ namespace EqualReality.ReviewAI
 			
 			speechBlend.enabled = false;
 			
-			speechBlend.voiceAudioSource = elSpeaker.GetComponent<AudioSource>();
+			speechBlend.voiceAudioSource = elSpeaker.gameObject.GetComponent<AudioSource>();
 			
 			elSpeaker.onPlayingVoice.AddListener(()=>{
 				speechBlend.enabled = true;

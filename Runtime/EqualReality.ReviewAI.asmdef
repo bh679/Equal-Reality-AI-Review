@@ -7,7 +7,8 @@
         "BrennanHattonUnityTools",
         "SpeechBlendDef",
         "Unity.TextMeshPro",
-        "EqualReality.ReviewAI.GPTAIIntergration"
+        "EqualReality.ReviewAI.GPTAIIntergration",
+        "GPTAIIntergration"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

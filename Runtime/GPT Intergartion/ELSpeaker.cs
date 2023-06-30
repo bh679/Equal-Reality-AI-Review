@@ -14,38 +14,18 @@ using OpenAI.Integrations.VoiceRecorder;
 
 namespace EqualReality.ReviewAI.GPTAIIntergration
 {
-	public class ELSpeaker : MonoBehaviour
+	public class ELSpeaker : OpenAI.Integrations.VoiceRecorder.ELSpeaker
     {
-        [Tooltip(
-            "Plays the audio response without downloading (faster), but isn't supported on all platforms."
-        )]
-        public bool useAudioStreaming = true;
-        public bool responsePlaying = false;
+	    
         private const string url = "https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM";
         private readonly WaveOutEvent outputDevice = new WaveOutEvent();
         
-        [SerializeField,
-        Tooltip(
-            "Check this file and make sure your API key on it is set."
-        )]
-        public ELAuthArgsV1 ELAuth;
+        
         private const string jsonBodyTemplate =
             "{\"text\": \"{{text}}\", \"voice_settings\": {\"stability\": {{stability}}, \"similarity_boost\": {{similarity_boost}}}}";
 
-        public TMP_Text textInput;
-        [Range(0, 1),
-        Tooltip(
-                "Boosting voice clarity and target speaker similarity is achieved by high enhancement; however, very high values can produce artifacts, so it's essential to find the optimal setting."
-            )]
-        public float similarity_boost = 0.4f;
-        [Range(0, 1),
-        Tooltip(
-                "Higher stability ensures consistency but may result in monotony, therefore for longer text, it is recommended to decrease stability."
-            )]
-	    public float stability = 0.1f;
-        
-	    public UnityEvent onSendForVoice, onDownloadingVoice, onPlayingVoice, onFinishPlayingVoice;
-
+	   
+	    
         public void SpeakSentenceFromInput()
         {
             responsePlaying = true;

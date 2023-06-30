@@ -72,20 +72,18 @@ namespace EqualReality.ReviewAI.GPTAIIntergration
 	}
 	
     [RequireComponent(typeof(AudioSource))]
-    public class VoiceRecorder : MonoBehaviour
+	public class VoiceRecorder : OpenAI.Integrations.ElevenLabs.VoiceRecorder
     {
-        public TMP_InputField input; // Displays the transcription text response of the audio sent to the Whisper API
-        public OpenAiCompleterV1 completer; // Holds the OpenAI API key settings
         private AudioSource audioSource; // The first audio source is responsible for playback
         private AudioSource micMonitor; // The second audio source is responsible for monitoring the mic
 
-        public int recordingLength = 10; // Length of recording in seconds
-	    public float recordingThreshold = 0.8f; // Mic volume threshold for triggering recording
+	    //public int recordingLength = 10; // Length of recording in seconds
+	    //public float recordingThreshold = 0.8f; // Mic volume threshold for triggering recording
 	    public float recordingTimeUtterancesThreshold = 1.5f; // Time threshold for stopping recording after mic volume drops below threshold
-	    public float recordingTimeThreshold = 2.5f; // Time threshold for stopping recording after mic volume drops below threshold
-        public float sensitivity = 100.0f; // Used to adjust the sensitivity of the mic volume
-        public float loudness = 0.0f; // Current volume level of the microphone
-        private bool isRecording = false; // Used to make sure we don't start recording multiple times
+	    //public float recordingTimeThreshold = 2.5f; // Time threshold for stopping recording after mic volume drops below threshold
+	    //public float sensitivity = 100.0f; // Used to adjust the sensitivity of the mic volume
+	    //public float loudness = 0.0f; // Current volume level of the microphone
+	    private bool isRecording = false; // Used to make sure we don't start recording multiple times
         private bool processingResponse = false; // Used to make sure we don't start processing multiple responses
 	    private float timeBelowThreshold = 0.0f, timeBelowUtterancesThreshold; // Used to keep track of how long the mic volume has been below the threshold
 
