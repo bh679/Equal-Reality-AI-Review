@@ -14,6 +14,10 @@ Unity (most recent tested on 2021.3.20f1) <br />
 [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ## Installation
+- Import UnityAssets
+[SpeechBlend](https://assetstore.unity.com/packages/tools/animation/speechblend-lipsync-149023)<br />
+[GPT AI Integration](https://assetstore.unity.com/packages/tools/ai/gpt-ai-integration-243729)<br />
+
 To install this project as a dependency using the Unity Package Manager,
 Install the requirements. <br/ >
 Windows -> Package Manager -> '+' -> `add package from git URL...` -> <br />
@@ -21,7 +25,7 @@ Windows -> Package Manager -> '+' -> `add package from git URL...` -> <br />
 ``https://github.com/bh679/Unity-Tools.git``<br />
 ``https://github.com/bh679/Unity-Discord-Webhook-Tools.git``<br />
 
- - Import UnityAssets
+ 
 
 ```
 https://github.com/bh679/Equal-Reality-AI-Review.git
