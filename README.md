@@ -44,12 +44,14 @@ You will get this error
 Import Assembly Definions .unitypackage
 
 ## Setup
+### Add Prefabs
 Add ``AI Manager.prefab`` to the root of the hirarchy
 <img width="263" alt="Screenshot 2023-06-30 at 3 54 16 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/8b659943-bdfb-4d8b-bf76-16011dfa0777">
 
 Add ``Ai Review.prefab`` to replace the review knot
 <img width="216" alt="Screenshot 2023-06-30 at 3 54 58 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/e302c61d-0808-4bed-b4b9-6e333eb1dc78">
 
+### Setup Speechblend
 Add ``Speechblend.cs`` Component to the ai avatar (at the same level as the ``Animator``.
 <img width="1686" alt="Screenshot 2023-06-30 at 3 55 21 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/37d8215e-c96d-4fc5-9772-296d5b1362f4">
 
@@ -65,6 +67,11 @@ Shape Template to ``CC3`` and click **Auto-Detect**
 Setup the reference from the ``AI Manager`` object ``AiAnimationController.cs`` component ``VR Guide Animator`` to reference the SpeechBlend ai avatar.
 <img width="827" alt="Screenshot 2023-06-30 at 3 58 19 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/9a29d529-18b4-4849-98f2-49debc3776d2">
 
+### Setup the PrivateKeys
+- Elevent Labs ``Assets/GPT AI Intergration/ElevenLabs/Runtime/Config``
+<img width="447" alt="Screenshot 2023-06-30 at 3 59 38 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/621ba873-7af9-4ea4-8dcc-d4fb254bba19">
+- OpenAi ``Assets/GPT AI Intergration/OpenAi/Runtime/Config``
+- <img width="408" alt="Screenshot 2023-06-30 at 4 00 28 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/71be09dc-cea3-4049-9e66-edde56f16ff6">
 
 Join the [Discord](https://discord.gg/VC8gZ2GNHs "Join Discord server") server to leave feedback or get support.
 
