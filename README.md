@@ -14,9 +14,9 @@ Unity (most recent tested on 2021.3.20f1) <br />
 [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ## Installation
-- Import UnityAssets
-[SpeechBlend](https://assetstore.unity.com/packages/tools/animation/speechblend-lipsync-149023)<br />
-[GPT AI Integration](https://assetstore.unity.com/packages/tools/ai/gpt-ai-integration-243729)<br />
+Import UnityAssets (I find this is best done by searching the package manager):
+- [SpeechBlend](https://assetstore.unity.com/packages/tools/animation/speechblend-lipsync-149023)<br />
+- [GPT AI Integration](https://assetstore.unity.com/packages/tools/ai/gpt-ai-integration-243729)<br />
 
 To install this project as a dependency using the Unity Package Manager,
 Install the requirements. <br/ >
@@ -37,6 +37,8 @@ Windows -> Package Manager -> '+' -> `add package from git URL...` -> <br />
 https://github.com/bh679/Equal-Reality-AI-Review.git
 ```
 
+You will get this error
+<img width="966" alt="Screenshot 2023-06-30 at 3 00 55 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/ed71bbec-4441-4602-acbb-809bdb8f7b7e">
 
 Import Assembly Definions .unitypackage
 
