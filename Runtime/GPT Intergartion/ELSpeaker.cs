@@ -24,7 +24,8 @@ namespace EqualReality.ReviewAI.GPTAIIntergration
         private const string jsonBodyTemplate =
             "{\"text\": \"{{text}}\", \"voice_settings\": {\"stability\": {{stability}}, \"similarity_boost\": {{similarity_boost}}}}";
 
-	   
+	    public UnityEvent onSendForVoice, onDownloadingVoice, onPlayingVoice, onFinishPlayingVoice;
+
 	    
         public void SpeakSentenceFromInput()
         {
