@@ -28,6 +28,9 @@ namespace EqualReality.ReviewAI
 			
 			speechBlend.voiceAudioSource = elSpeaker.gameObject.GetComponent<AudioSource>();
 			
+			if(VRGuideAnimator == null)
+				return;
+			
 			elSpeaker.onPlayingVoice.AddListener(()=>{
 				speechBlend.enabled = true;
 				speechBlend.lipsyncActive = true;
