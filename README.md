@@ -20,18 +20,7 @@ Unity (most recent tested on 2021.3.20f1) <br />
 
 To install this project as a dependency using the Unity Package Manager,
 Install the requirements. <br/ >
-Windows -> Package Manager -> '+' -> `add package from git URL...` -> <br />
-``https://github.com/bh679/Unity-Tools.git``<br />
-``https://github.com/bh679/Unity-GPT-Tools.git``<br />
-``https://github.com/bh679/Unity-Discord-Webhook-Tools.git``<br />
-
- 
-
-```
-https://github.com/bh679/Equal-Reality-AI-Review.git
-```
-or
-add the following line to your project's `manifest.json`:
+Add the following line to your project's `manifest.json`:
 
 ```
     "com.brennanhatton.discord": "https://github.com/bh679/Unity-Discord-Webhook-Tools.git",
@@ -39,6 +28,15 @@ add the following line to your project's `manifest.json`:
     "com.brennanhatton.unitytools": "https://github.com/bh679/Unity-Tools.git",
     "com.equalreality.reviewai": "https://github.com/bh679/Equal-Reality-AI-Review.git"
 ```
+or
+Windows -> Package Manager -> '+' -> `add package from git URL...` -> <br />
+``https://github.com/bh679/Unity-Tools.git``<br />
+``https://github.com/bh679/Unity-GPT-Tools.git``<br />
+``https://github.com/bh679/Unity-Discord-Webhook-Tools.git``<br />
+```
+https://github.com/bh679/Equal-Reality-AI-Review.git
+```
+
 
 Import Assembly Definions .unitypackage
 
