@@ -45,26 +45,26 @@ Import Assembly Definions .unitypackage
 
 ## Setup
 ### Add Prefabs
-Add ``AI Manager.prefab`` to the root of the hirarchy
+Add ``AI Manager.prefab`` to the root of the hirarchy <br />
 <img width="263" alt="Screenshot 2023-06-30 at 3 54 16 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/8b659943-bdfb-4d8b-bf76-16011dfa0777">
 
-Add ``Ai Review.prefab`` to replace the review knot
+Add ``Ai Review.prefab`` to replace the review knot<br />
 <img width="216" alt="Screenshot 2023-06-30 at 3 54 58 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/e302c61d-0808-4bed-b4b9-6e333eb1dc78">
 
 ### Setup Speechblend
-Add ``Speechblend.cs`` Component to the ai avatar (at the same level as the ``Animator``.
+Add ``Speechblend.cs`` Component to the ai avatar (at the same level as the ``Animator``.<br />
 <img width="1686" alt="Screenshot 2023-06-30 at 3 55 21 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/37d8215e-c96d-4fc5-9772-296d5b1362f4">
 
-Set the ``Head Mesh`` to the ``CC_Base_Body`` child.
+Set the ``Head Mesh`` to the ``CC_Base_Body`` child.<br />
 <img width="1686" alt="Screenshot 2023-06-30 at 3 56 44 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/6be88248-954f-48c7-8ea2-3c4921a3f3b5">
 
-Tracking mode to ``Jaw and Visemes``
+Tracking mode to ``Jaw and Visemes``<br />
 <img width="789" alt="Screenshot 2023-06-30 at 3 57 26 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/4c1d426b-14e9-45ad-abf6-83e3f6256c01">
 
-Shape Template to ``CC3`` and click **Auto-Detect**
+Shape Template to ``CC3`` and click **Auto-Detect**<br />
 <img width="794" alt="Screenshot 2023-06-30 at 3 57 44 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/5cdf737d-7392-4750-8a28-49cd5c7a4297">
 
-Setup the reference from the ``AI Manager`` object ``AiAnimationController.cs`` component ``VR Guide Animator`` to reference the SpeechBlend ai avatar.
+Setup the reference from the ``AI Manager`` object ``AiAnimationController.cs`` component ``VR Guide Animator`` to reference the SpeechBlend ai avatar.<br />
 <img width="827" alt="Screenshot 2023-06-30 at 3 58 19 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/9a29d529-18b4-4849-98f2-49debc3776d2">
 
 ### Setup the PrivateKeys
