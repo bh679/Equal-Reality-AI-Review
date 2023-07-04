@@ -17,7 +17,7 @@ Unity (most recent tested on 2021.3.20f1) <br />
 Import UnityAssets (I find this is best done by searching the package manager):
 - [SpeechBlend](https://assetstore.unity.com/packages/tools/animation/speechblend-lipsync-149023)<br />
 - [GPT AI Integration](https://assetstore.unity.com/packages/tools/ai/gpt-ai-integration-243729)<br />
-- [CleanFlatIcon](https://assetstore.unity.com/packages/2d/gui/icons/clean-flat-icons-98117) (optional) <br />
+- [CleanFlatIcon](https://assetstore.unity.com/packages/2d/gui/icons/clean-flat-icons-98117) (optional / paid) <br />
 
 To install this project as a dependency using the Unity Package Manager,
 Install the requirements. <br/ >
@@ -42,6 +42,7 @@ You will get this error
 <img width="966" alt="Screenshot 2023-06-30 at 3 00 55 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/ed71bbec-4441-4602-acbb-809bdb8f7b7e">
 
 Import Assembly Definions .unitypackage
+<img width="720" alt="Screenshot 2023-07-04 at 11 29 26 am" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/d21789b1-405c-4b27-9547-0e6213209dec">
 
 ## Setup
 ### Add Prefabs
