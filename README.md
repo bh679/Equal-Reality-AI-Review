@@ -69,10 +69,10 @@ Setup the reference from the ``AI Manager`` object ``AiAnimationController.cs`` 
 <img width="827" alt="Screenshot 2023-06-30 at 3 58 19 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/9a29d529-18b4-4849-98f2-49debc3776d2">
 
 ### Setup the PrivateKeys
-- Elevent Labs ``Assets/GPT AI Intergration/ElevenLabs/Runtime/Config`` ```ELAuthArgs```<br />
+- Elevent Labs ``Assets/GPT AI Intergration/ElevenLabs/Runtime/Config/`` ```ELAuthArgs```<br />
 <img width="447" alt="Screenshot 2023-06-30 at 3 59 38 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/621ba873-7af9-4ea4-8dcc-d4fb254bba19"><br />
 get a key at [elevenlabs.io](https://beta.elevenlabs.io/pricing)<br />
-- OpenAi ``Assets/GPT AI Intergration/OpenAi/Runtime/Config`` ```DefaultAuthArgsV1```<br />
+- OpenAi ``Assets/GPT AI Intergration/OpenAi/Runtime/Config/`` ```DefaultAuthArgsV1```<br />
 <img width="408" alt="Screenshot 2023-06-30 at 4 00 28 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/71be09dc-cea3-4049-9e66-edde56f16ff6"><br /> get a key at [openai.com](https://platform.openai.com/account/api-keys)<br />
 
 Join the [Discord](https://discord.gg/VC8gZ2GNHs "Join Discord server") server to leave feedback or get support.
