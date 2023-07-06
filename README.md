@@ -21,7 +21,7 @@ Import UnityAssets (I find this is best done by searching the package manager):
 
 To install this project as a dependency using the Unity Package Manager,
 Install the requirements. <br/ >
-Add the following line to your project's `manifest.json`:
+Add the following line to your project's `manifest.json`: (you will need GIT installed and environment variable)
 
 ```
     "com.brennanhatton.discord": "https://github.com/bh679/Unity-Discord-Webhook-Tools.git",
