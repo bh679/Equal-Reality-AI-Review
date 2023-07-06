@@ -70,7 +70,7 @@ Setup the reference from the ``AI Manager`` object ``AiAnimationController.cs`` 
 
 ### Setup the PrivateKeys
 - Elevent Labs ``Assets/GPT AI Intergration/ElevenLabs/Runtime/Config``<br />
-<img width="447" alt="Screenshot 2023-06-30 at 3 59 38 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/621ba873-7af9-4ea4-8dcc-d4fb254bba19"><br />
+<img width="447" alt="Screenshot 2023-06-30 at 3 59 38 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/621ba873-7af9-4ea4-8dcc-d4fb254bba19"><br />```ELAuthArgs```
 get a key at [elevenlabs.io](https://beta.elevenlabs.io/pricing)<br />
 - OpenAi ``Assets/GPT AI Intergration/OpenAi/Runtime/Config``<br />
 <img width="408" alt="Screenshot 2023-06-30 at 4 00 28 pm" src="https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/71be09dc-cea3-4049-9e66-edde56f16ff6"><br /> get a key at [openai.com](https://platform.openai.com/account/api-keys)<br />
