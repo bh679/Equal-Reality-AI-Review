@@ -49,6 +49,10 @@ namespace EqualReality.ReviewAI
 		void Start()
 		{
 			AIReviewManager.Instance.onAIReset.AddListener(SetAIRefs);
+			
+			if(VRGuideAnimator == null)
+				return;
+				
 			speechBlend = VRGuideAnimator.GetComponent<SpeechBlend>();
 		}
 	}
