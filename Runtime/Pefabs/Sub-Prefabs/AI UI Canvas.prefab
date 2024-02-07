@@ -506,7 +506,6 @@ GameObject:
   - component: {fileID: 6536613399654612039}
   - component: {fileID: 6536613399654612043}
   - component: {fileID: 6536613399654612042}
-  - component: {fileID: 6536613399654612037}
   - component: {fileID: 6536613399654612036}
   m_Layer: 5
   m_Name: Panel
@@ -573,19 +572,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6536613399654612037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536613399654612038}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dee41256d2e04f0fb39e59e7a937c44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interval: 0.1
 --- !u!114 &6536613399654612036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,7 +676,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &6536613399676341198
 MonoBehaviour:
   m_ObjectHideFlags: 0
