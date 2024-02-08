@@ -29,10 +29,7 @@ namespace EqualReality.ReviewAI
 		
 		public AIState aiState = AIState.None;
 			
-		public UnityEvent  OnListern, OnThink, OnSpeak;
-		public AIState  OnListernState = AIState.MicOn, 
-			OnThinkState = AIState.SentToGPT, 
-			OnSpeakState = AIState.PlayingVoice;
+		public UnityEvent  OnMicOn, OnMicRecording, OnMicStopped, OnSentToGPT, OnResponseFromGPT, OnVoicing, OnVoiceDownloading, OnVoicePlaying, OnVoiceFinished;
 		
 		public LoudnessToHeight[] loudnessToHeights;
 		public RecordingDeviceToText recordingDeviceCheck;
@@ -71,75 +68,63 @@ namespace EqualReality.ReviewAI
 				SetAllOff();
 				MicOn.gameObject.SetActive(true);
 				aiState = AIState.MicOn;
-				RunUnityEvents();
+				OnMicOn.Invoke();
 			});
 			
 			voice.onMicRecording.AddListener(()=>{
 				SetAllOff();
 				MicRecording.gameObject.SetActive(true);
 				aiState = AIState.MicRecording;
-				RunUnityEvents();
+				OnMicRecording.Invoke();
 			});
 			
 			voice.onMicStopped.AddListener(()=>{
 				SetAllOff();
 				MicStopped.gameObject.SetActive(true);
 				aiState = AIState.MicStopped;
-				RunUnityEvents();
+				OnMicStopped.Invoke();
 			});
 			
 			gpt.onSendGPT.AddListener((string str)=>{
 				SetAllOff();
 				SentToGPT.gameObject.SetActive(true);
 				aiState = AIState.SentToGPT;
-				RunUnityEvents();
+				OnSentToGPT.Invoke();
 			});
 			
 			gpt.onRecieveResponse.AddListener((string str)=>{
 				SetAllOff();
 				Response.gameObject.SetActive(true);
 				aiState = AIState.ReponseFromGPT;
-				RunUnityEvents();
+				OnResponseFromGPT.Invoke();
 			});
 			
 			elSpeaker.onSendForVoice.AddListener(()=>{
 				SetAllOff();
 				Voicing.gameObject.SetActive(true);
 				aiState = AIState.Voicing;
-				RunUnityEvents();
+				OnVoicing.Invoke();
 			});
 			
 			elSpeaker.onDownloadingVoice.AddListener(()=>{
 				SetAllOff();
 				DownloadingVoice.gameObject.SetActive(true);
 				aiState = AIState.DownloadingVoice;
-				RunUnityEvents();
+				OnVoiceDownloading.Invoke();
 			});
 			
 			elSpeaker.onPlayingVoice.AddListener(()=>{
 				SetAllOff();
 				PlayingVoice.gameObject.SetActive(true);
 				aiState = AIState.PlayingVoice;
-				RunUnityEvents();
+				OnVoicePlaying.Invoke();
 			});
 			
 			elSpeaker.onFinishPlayingVoice.AddListener(()=>{
 				PlayingVoice.gameObject.SetActive(false);
 				aiState = AIState.None;
-				RunUnityEvents();
+				OnVoiceFinished.Invoke();
 			});
-		}
-		
-		void RunUnityEvents()
-		{
-			if(aiState == OnListernState)
-				OnListern.Invoke();
-				
-			if(aiState == OnThinkState)
-				OnThink.Invoke();
-				
-			if(aiState == OnSpeakState)
-				OnSpeak.Invoke();
 		}
 		
 		void SetAllOff()
