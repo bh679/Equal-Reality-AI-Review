@@ -1,17 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using EqualReality.ReviewAI.GPTAIIntergration;
 using TMPro;
 
 namespace EqualReality.ReviewAI
 {
+	public enum AIState
+	{
+		MicOn,
+		MicRecording,
+		MicStopped,
+		SentToGPT,
+		ReponseFromGPT,
+		Voicing,
+		DownloadingVoice,
+		PlayingVoice,
+		None
+	}
+	
 	public class AIReviewUI : MonoBehaviour
 	{
 		OpenAIDemo gpt;
 		VoiceRecorder voice;
 		ELSpeaker elSpeaker;
 		public Transform MicOn, MicRecording, MicStopped, SentToGPT, Response, Voicing, DownloadingVoice, PlayingVoice;
+		
+		public AIState aiState = AIState.None;
+			
+		public UnityEvent  OnListern, OnThink, OnSpeak;
+		public AIState  OnListernState = AIState.MicOn, 
+			OnThinkState = AIState.SentToGPT, 
+			OnSpeakState = AIState.PlayingVoice;
 		
 		public LoudnessToHeight[] loudnessToHeights;
 		public RecordingDeviceToText recordingDeviceCheck;
@@ -49,46 +70,76 @@ namespace EqualReality.ReviewAI
 			voice.onMicMonitor.AddListener(()=>{
 				SetAllOff();
 				MicOn.gameObject.SetActive(true);
+				aiState = AIState.MicOn;
+				RunUnityEvents();
 			});
 			
 			voice.onMicRecording.AddListener(()=>{
 				SetAllOff();
 				MicRecording.gameObject.SetActive(true);
+				aiState = AIState.MicRecording;
+				RunUnityEvents();
 			});
 			
 			voice.onMicStopped.AddListener(()=>{
 				SetAllOff();
 				MicStopped.gameObject.SetActive(true);
+				aiState = AIState.MicStopped;
+				RunUnityEvents();
 			});
 			
 			gpt.onSendGPT.AddListener((string str)=>{
 				SetAllOff();
 				SentToGPT.gameObject.SetActive(true);
+				aiState = AIState.SentToGPT;
+				RunUnityEvents();
 			});
 			
 			gpt.onRecieveResponse.AddListener((string str)=>{
 				SetAllOff();
 				Response.gameObject.SetActive(true);
+				aiState = AIState.ReponseFromGPT;
+				RunUnityEvents();
 			});
 			
 			elSpeaker.onSendForVoice.AddListener(()=>{
 				SetAllOff();
 				Voicing.gameObject.SetActive(true);
+				aiState = AIState.Voicing;
+				RunUnityEvents();
 			});
 			
 			elSpeaker.onDownloadingVoice.AddListener(()=>{
 				SetAllOff();
 				DownloadingVoice.gameObject.SetActive(true);
+				aiState = AIState.DownloadingVoice;
+				RunUnityEvents();
 			});
 			
 			elSpeaker.onPlayingVoice.AddListener(()=>{
 				SetAllOff();
 				PlayingVoice.gameObject.SetActive(true);
+				aiState = AIState.PlayingVoice;
+				RunUnityEvents();
 			});
 			
 			elSpeaker.onFinishPlayingVoice.AddListener(()=>{
 				PlayingVoice.gameObject.SetActive(false);
+				aiState = AIState.None;
+				RunUnityEvents();
 			});
+		}
+		
+		void RunUnityEvents()
+		{
+			if(aiState == OnListernState)
+				OnListern.Invoke();
+				
+			if(aiState == OnThinkState)
+				OnThink.Invoke();
+				
+			if(aiState == OnSpeakState)
+				OnSpeak.Invoke();
 		}
 		
 		void SetAllOff()
