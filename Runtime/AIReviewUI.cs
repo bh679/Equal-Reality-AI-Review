@@ -29,7 +29,9 @@ namespace EqualReality.ReviewAI
 		
 		public AIState aiState = AIState.None;
 			
-		public UnityEvent  OnMicOn, OnMicRecording, OnMicStopped, OnSentToGPT, OnResponseFromGPT, OnVoicing, OnVoiceDownloading, OnVoicePlaying, OnVoiceFinished;
+		public UnityEvent  OnMicOn, OnMicRecording, OnMicStopped;
+		public StringEvent OnSentToGPT, OnResponseFromGPT;
+		public UnityEvent OnVoicing, OnVoiceDownloading, OnVoicePlaying, OnVoiceFinished;
 		
 		public LoudnessToHeight[] loudnessToHeights;
 		public RecordingDeviceToText recordingDeviceCheck;
@@ -89,14 +91,14 @@ namespace EqualReality.ReviewAI
 				SetAllOff();
 				SentToGPT.gameObject.SetActive(true);
 				aiState = AIState.SentToGPT;
-				OnSentToGPT.Invoke();
+				OnSentToGPT.Invoke(str);
 			});
 			
 			gpt.onRecieveResponse.AddListener((string str)=>{
 				SetAllOff();
 				Response.gameObject.SetActive(true);
 				aiState = AIState.ReponseFromGPT;
-				OnResponseFromGPT.Invoke();
+				OnResponseFromGPT.Invoke(str);
 			});
 			
 			elSpeaker.onSendForVoice.AddListener(()=>{
