@@ -104,6 +104,25 @@ Edit ReviewData.txt
 ```
  
  
-## Documentation
+# Documentation
  - [AI Review Feature Specifications](https://docs.google.com/document/d/1ccq_VnhZ-AAbUW-jhwOcOB_fO1q0LPr8/edit)<br />
  - [EqualReality.AI Dependencies Map](https://docs.google.com/presentation/d/1Y2eK51DfQYKYzhT-jNj3jHkHUAtdsLeV46JADhA2G_E/edit#slide=id.g2528c1e646d_0_17)<br />
+
+
+
+ ## Review AI UI 
+
+ ### Stages
+ blob:https://ptrvr.atlassian.net/a7c3efbc-fb74-4c1b-b538-e37fbcb5917f![image](https://github.com/bh679/Equal-Reality-AI-Review/assets/2542558/311f1796-9e75-49ff-9cfa-9e07dc1d76b6)
+ https://discord.com/channels/694694754172010498/1178923806132293662/1205004139072061450
+
+ - OnMicOn - When Mic is looked for (every time its time for the user to speak) its found and running. 
+ - OnMicRecording - When the Mic has started recording.
+ - OnMicStopped - When the Mic has stopped recording. (Currently auto detecting speech stopped)
+ - OnSendGPT - When voice to text has finished, and is sent off to GPT.
+ - OnResponseFromGPT - When GPT has return a response.
+ - OnVoicing - When the voicing of the response has begun in the cloud. 
+ - OnVoiceDownloading - When the voice has started being downloaded.
+ - OnVoicePlaying - When the voice has been downloaded and started playing.
+ - OnVoiceFinished - When the voice has finished playing;
+
