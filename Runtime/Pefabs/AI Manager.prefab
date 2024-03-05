@@ -91,7 +91,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6536613399676341192, guid: a92604395f9d44babb6ba4074cf016fd, type: 3}
       propertyPath: m_Name
-      value: AI UI Canvas
+      value: AI UI States Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 6536613399676341193, guid: a92604395f9d44babb6ba4074cf016fd, type: 3}
       propertyPath: m_Pivot.x
