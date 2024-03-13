@@ -36,7 +36,7 @@ namespace EqualReality.ReviewAI
 		public LoudnessToHeight[] loudnessToHeights;
 		public LoudnessToImageFill[] loudnessToImageFills;
 		public RecordingDeviceToText recordingDeviceCheck;
-		public TMP_InputField voice_Input;
+		public TMP_InputField voice_Input, aiResponse;
 	
 		void Reset()
 		{
@@ -108,6 +108,7 @@ namespace EqualReality.ReviewAI
 				Response.gameObject.SetActive(true);
 				aiState = AIState.ReponseFromGPT;
 				OnResponseFromGPT.Invoke(str);
+				if(aiResponse != null) aiResponse.text = str;
 			});
 			
 			elSpeaker.onSendForVoice.AddListener(()=>{
