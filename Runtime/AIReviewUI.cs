@@ -34,6 +34,7 @@ namespace EqualReality.ReviewAI
 		public UnityEvent OnVoicing, OnVoiceDownloading, OnVoicePlaying, OnVoiceFinished;
 		
 		public LoudnessToHeight[] loudnessToHeights;
+		public LoudnessToImageFill[] loudnessToImageFills;
 		public RecordingDeviceToText recordingDeviceCheck;
 		public TMP_InputField voice_Input;
 	
@@ -49,6 +50,8 @@ namespace EqualReality.ReviewAI
 			PlayingVoice = transform. Find( "Playing Voice");
 			
 			loudnessToHeights = this.GetComponentsInChildren<LoudnessToHeight>();
+			loudnessToImageFills = this.GetComponentsInChildren<LoudnessToImageFill>();
+			
 		}
 		
 
@@ -63,6 +66,12 @@ namespace EqualReality.ReviewAI
 			{
 				loudnessToHeights[i].vr = voice;
 			}
+			
+			for(int i = 0; i < loudnessToImageFills.Length; i++)
+			{
+				loudnessToImageFills[i].vr = voice;
+			}
+			
 			
 			recordingDeviceCheck.vr = voice;
 			
