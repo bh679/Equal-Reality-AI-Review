@@ -8,6 +8,7 @@ namespace EqualReality.ReviewAI.GPTAIIntergration
 	public class LoudnessToHeight : MonoBehaviour
 	{
 		public VoiceRecorder vr;
+		public float multiplier = 1;
 	
 		float y = 0;
 		// Update is called once per frame
@@ -16,7 +17,7 @@ namespace EqualReality.ReviewAI.GPTAIIntergration
 			
 			y = vr.loudness;
 			
-			this.transform.localScale = new Vector3(1,y,1);
+			this.transform.localScale = new Vector3(1,y * multiplier,1);
 			
 			
 		}
