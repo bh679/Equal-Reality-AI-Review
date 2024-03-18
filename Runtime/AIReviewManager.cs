@@ -9,7 +9,6 @@ using BrennanHatton.GPT;
 namespace EqualReality.ReviewAI
 {
 	
-
 	/// <summary>
 	/// A UnityEvent with a Grabbable as the parameter
 	/// </summary>
@@ -35,9 +34,10 @@ namespace EqualReality.ReviewAI
 		string[] guidePrompts;
 		public string preQuestionText, dataFormatExmpleText, genericCallToActionText, reviewDataText, acknowledgeCTAText, finalCTAText;
 		string preQuestion, dataFormatExmple, genericCallToAction, acknowledgeCTA, finalCTA;
-		int comment = 0, qid = 0;
+		public int comment = 0, qid = 0;
 		public UnityEvent onComplete, questionDone;
 		public AIResetEvent onAIReset;
+		
 		
 		
 		public List<InteractionData> interactions = new List<InteractionData>();

@@ -20,6 +20,23 @@ namespace EqualReality.ReviewAI
 		None
 	}
 	
+	
+
+	/// <summary>
+	/// Question actions are Unity Events that can occcur for a particular point in question.
+	/// eg: you want to enable bar graphs for when a voice line is read by the ai
+	/// eg2: you want to disable bar graphs when the player has finished responded to a particuar question.
+	/// </summary>
+	[System.Serializable]
+	public class QuestionActions
+	{
+		public UnityEvent action;
+		
+		public int QuestionID;
+		
+		public AIState state;
+	}
+	
 	public class AIReviewUI : MonoBehaviour
 	{
 		OpenAIDemo gpt;
@@ -37,6 +54,9 @@ namespace EqualReality.ReviewAI
 		public LoudnessToImageFill[] loudnessToImageFills;
 		public RecordingDeviceToText recordingDeviceCheck;
 		public TMP_InputField voice_Input, aiResponse;
+		
+		
+		public List<QuestionActions> questionActions;
 	
 		void Reset()
 		{
@@ -80,6 +100,7 @@ namespace EqualReality.ReviewAI
 				MicOn.gameObject.SetActive(true);
 				aiState = AIState.MicOn;
 				OnMicOn.Invoke();
+				ExecuteQuestionAction();
 			});
 			
 			voice.onMicRecording.AddListener(()=>{
@@ -87,6 +108,7 @@ namespace EqualReality.ReviewAI
 				MicRecording.gameObject.SetActive(true);
 				aiState = AIState.MicRecording;
 				OnMicRecording.Invoke();
+				ExecuteQuestionAction();
 			});
 			
 			voice.onMicStopped.AddListener(()=>{
@@ -94,6 +116,7 @@ namespace EqualReality.ReviewAI
 				MicStopped.gameObject.SetActive(true);
 				aiState = AIState.MicStopped;
 				OnMicStopped.Invoke();
+				ExecuteQuestionAction();
 			});
 			
 			gpt.onSendGPT.AddListener((string str)=>{
@@ -101,6 +124,7 @@ namespace EqualReality.ReviewAI
 				SentToGPT.gameObject.SetActive(true);
 				aiState = AIState.SentToGPT;
 				OnSentToGPT.Invoke(str);
+				ExecuteQuestionAction();
 			});
 			
 			gpt.onRecieveResponse.AddListener((string str)=>{
@@ -109,6 +133,7 @@ namespace EqualReality.ReviewAI
 				aiState = AIState.ReponseFromGPT;
 				OnResponseFromGPT.Invoke(str);
 				if(aiResponse != null) aiResponse.text = str;
+				ExecuteQuestionAction();
 			});
 			
 			elSpeaker.onSendForVoice.AddListener(()=>{
@@ -116,6 +141,7 @@ namespace EqualReality.ReviewAI
 				Voicing.gameObject.SetActive(true);
 				aiState = AIState.Voicing;
 				OnVoicing.Invoke();
+				ExecuteQuestionAction();
 			});
 			
 			elSpeaker.onDownloadingVoice.AddListener(()=>{
@@ -123,6 +149,7 @@ namespace EqualReality.ReviewAI
 				DownloadingVoice.gameObject.SetActive(true);
 				aiState = AIState.DownloadingVoice;
 				OnVoiceDownloading.Invoke();
+				ExecuteQuestionAction();
 			});
 			
 			elSpeaker.onPlayingVoice.AddListener(()=>{
@@ -130,12 +157,14 @@ namespace EqualReality.ReviewAI
 				PlayingVoice.gameObject.SetActive(true);
 				aiState = AIState.PlayingVoice;
 				OnVoicePlaying.Invoke();
+				ExecuteQuestionAction();
 			});
 			
 			elSpeaker.onFinishPlayingVoice.AddListener(()=>{
 				PlayingVoice.gameObject.SetActive(false);
 				aiState = AIState.None;
 				OnVoiceFinished.Invoke();
+				ExecuteQuestionAction();
 			});
 		}
 		
@@ -154,6 +183,14 @@ namespace EqualReality.ReviewAI
 		void Start()
 		{
 			AIReviewManager.Instance.onAIReset.AddListener(SetAIRefs);
+		}
+		
+		//AIReviewManager.Instance.qid
+		void ExecuteQuestionAction()
+		{
+			for(int i  0; i < questionActions.Count; i++)
+				if(questionActions[i].state == aiState && questionActions[i].QuestionID == AIReviewManager.Instance.qid)
+					questionActions[i].action.Invoke();
 		}
 	}
 }
