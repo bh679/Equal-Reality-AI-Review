@@ -246,7 +246,7 @@ MonoBehaviour:
   ELAuth: {fileID: 11400000, guid: d91e960e5d74c384f837cd0b40448f51, type: 2}
   textInput: {fileID: 0}
   similarity_boost: 0.4
-  stability: 0.1
+  stability: 0.2
   onSendForVoice:
     m_PersistentCalls:
       m_Calls: []
