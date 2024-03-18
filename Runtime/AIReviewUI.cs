@@ -188,7 +188,7 @@ namespace EqualReality.ReviewAI
 		//AIReviewManager.Instance.qid
 		void ExecuteQuestionAction()
 		{
-			for(int i  0; i < questionActions.Count; i++)
+			for(int i = 0; i < questionActions.Count; i++)
 				if(questionActions[i].state == aiState && questionActions[i].QuestionID == AIReviewManager.Instance.qid)
 					questionActions[i].action.Invoke();
 		}
