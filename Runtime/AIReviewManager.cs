@@ -253,6 +253,7 @@ namespace EqualReality.ReviewAI
 		void AskQuestion(string question)
 		{
 			Debug.Log("Asking Question");
+			qid++;
 			
 			ReviewQuestion nextQuestion = new ReviewQuestion();
 			nextQuestion.Question = question;
@@ -262,6 +263,7 @@ namespace EqualReality.ReviewAI
 			
 			voice.ResetListerning();
 			voice.MonitorMic();
+			
 		}
 		
 		void NextComment()
