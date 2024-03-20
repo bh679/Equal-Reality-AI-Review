@@ -14,7 +14,7 @@ namespace EqualReality.ReviewAI.GPTAIIntergration
 		
 		public Image image;
 		
-		public bool scaleWhenBeyondOne = true;
+		//public bool scaleWhenBeyondOne = true;
 	
 		// Update is called once per frame
 		void Update()
@@ -24,10 +24,10 @@ namespace EqualReality.ReviewAI.GPTAIIntergration
 			
 			image.fillAmount = y;
 			
-			if(scaleWhenBeyondOne && y > 1)
+			/*if(scaleWhenBeyondOne && y > 1)
 				this.transform.localScale = new Vector3(y,y,y);
 			else
-				this.transform.localScale = Vector3.one;
+			this.transform.localScale = Vector3.one;*/
 		}
 	}
 
