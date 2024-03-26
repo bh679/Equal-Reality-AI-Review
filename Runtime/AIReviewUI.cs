@@ -150,4 +150,5 @@ namespace EqualReality.ReviewAI
 		{
 			AIReviewManager.Instance.onAIReset.AddListener(SetAIRefs);
 		}
+	}
 }
