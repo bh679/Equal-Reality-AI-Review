@@ -40,7 +40,6 @@ namespace EqualReality.ReviewAI
 	public class AIReviewUI : MonoBehaviour
 	{
 		OpenAIDemo gpt;
-		VoiceRecorder voice;
 		ELSpeaker elSpeaker;
 		public Transform MicOn, MicRecording, MicStopped, SentToGPT, Response, Voicing, DownloadingVoice, PlayingVoice;
 		
@@ -50,13 +49,17 @@ namespace EqualReality.ReviewAI
 		public StringEvent OnSentToGPT, OnResponseFromGPT;
 		public UnityEvent OnVoicing, OnVoiceDownloading, OnVoicePlaying, OnVoiceFinished;
 		
-		public LoudnessToHeight[] loudnessToHeights;
+		/*public LoudnessToHeight[] loudnessToHeights;
 		public LoudnessToImageFill[] loudnessToImageFills;
+		public LoudnessEvent[] loudnessEvents;*/
 		public RecordingDeviceToText recordingDeviceCheck;
 		public TMP_InputField voice_Input, aiResponse;
 		
+		public UnityEvent onSetAIRefts;
+		
 		
 		public List<QuestionActions> questionActions;
+		public VoiceRecorder voice;
 	
 		void Reset()
 		{
@@ -69,9 +72,6 @@ namespace EqualReality.ReviewAI
 			DownloadingVoice = transform. Find( "Downloading Voice");
 			PlayingVoice = transform. Find( "Playing Voice");
 			
-			loudnessToHeights = this.GetComponentsInChildren<LoudnessToHeight>();
-			loudnessToImageFills = this.GetComponentsInChildren<LoudnessToImageFill>();
-			
 		}
 		
 
@@ -82,16 +82,7 @@ namespace EqualReality.ReviewAI
 			this.elSpeaker = _elSpeaker;
 			this.voice.input = voice_Input;
 			
-			for(int i = 0; i < loudnessToHeights.Length; i++)
-			{
-				loudnessToHeights[i].vr = voice;
-			}
-			
-			for(int i = 0; i < loudnessToImageFills.Length; i++)
-			{
-				loudnessToImageFills[i].vr = voice;
-			}
-			
+			onSetAIRefts.Invoke();
 			
 			recordingDeviceCheck.vr = voice;
 			
