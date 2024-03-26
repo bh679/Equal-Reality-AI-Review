@@ -17,9 +17,9 @@ namespace EqualReality.ReviewAI.GPTAIIntergration
 		void Reset()
 		{
 			aIReviewUI = GameObject.FindObjectOfType<AIReviewUI>();
-			loudnessToHeights = GameObject.FindObjectsOfType<LoudnessToHeight>();
-			loudnessToImageFills = GameObject.FindObjectsOfType<LoudnessToImageFill>();
-			loudnessEvents = GameObject.FindObjectsOfType<LoudnessEvent>();
+			loudnessToHeights = GameObject.FindObjectsOfType<LoudnessToHeight>(true);
+			loudnessToImageFills = GameObject.FindObjectsOfType<LoudnessToImageFill>(true);
+			loudnessEvents = GameObject.FindObjectsOfType<LoudnessEvent>(true);
 		}
 		
 		
