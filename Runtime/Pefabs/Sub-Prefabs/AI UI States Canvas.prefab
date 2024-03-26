@@ -585,6 +585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vr: {fileID: 0}
+  multiplier: 1
 --- !u!1 &6536613399676341192
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +599,8 @@ GameObject:
   - component: {fileID: 6536613399676341199}
   - component: {fileID: 6536613399676341198}
   - component: {fileID: 6536613399676341197}
+  - component: {fileID: 2263383465155905261}
+  - component: {fileID: 5632733568295842218}
   m_Layer: 5
   m_Name: AI UI States Canvas
   m_TagString: Untagged
@@ -742,11 +745,43 @@ MonoBehaviour:
   OnVoiceFinished:
     m_PersistentCalls:
       m_Calls: []
-  loudnessToHeights:
-  - {fileID: 6536613399752433516}
-  - {fileID: 6536613399654612036}
   recordingDeviceCheck: {fileID: 6536613400015737284}
   voice_Input: {fileID: 6536613400368061083}
+  aiResponse: {fileID: 0}
+  onSetAIRefts:
+    m_PersistentCalls:
+      m_Calls: []
+  voice: {fileID: 0}
+--- !u!114 &2263383465155905261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6536613399676341192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 366a48fb0d95042eaa3214715faf6806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aIReviewUI: {fileID: 6536613399676341197}
+  loudnessToHeights: []
+  loudnessToImageFills: []
+  loudnessEvents: []
+--- !u!114 &5632733568295842218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6536613399676341192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d10a05c640d465684418c608d395c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aIReviewUI: {fileID: 6536613399676341197}
+  questionActions: []
 --- !u!1 &6536613399752433518
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,6 +872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vr: {fileID: 0}
+  multiplier: 1
 --- !u!1 &6536613399763378298
 GameObject:
   m_ObjectHideFlags: 0
