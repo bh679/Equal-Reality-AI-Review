@@ -131,6 +131,7 @@ namespace EqualReality.ReviewAI
 				PlayingVoice.gameObject.SetActive(false);
 				aiState = AIState.None;
 				OnVoiceFinished.Invoke();
+				voice_Input.text = "";
 			});
 		}
 		
