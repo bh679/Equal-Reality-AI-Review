@@ -288,8 +288,8 @@ MonoBehaviour:
   prompt: {fileID: 0}
   response: {fileID: 0}
   prompWrapper:
-    prePrompt: 
-    postPrompt: 
+    prePrompt: '{'
+    postPrompt: '}'
     prePrompt2: []
     postPrompt2: []
     prePromptText: []
