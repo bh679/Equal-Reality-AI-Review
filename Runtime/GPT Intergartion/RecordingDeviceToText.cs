@@ -16,9 +16,11 @@ namespace EqualReality.ReviewAI.GPTAIIntergration
 		// Update is called once per frame
 		void Update()
 		{
+			
 			text.text = "Access: " + Application.HasUserAuthorization(UserAuthorization.Microphone) + "\n"
 				+vr.micDeviceName + "\n"
-				+(source == null?"":source.clip.name);
+				+(source == null?"":source.clip.name) 
+				+" "+(Microphone.devices.Length)+" mics.";
 			
 			
 		}
