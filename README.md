@@ -15,7 +15,7 @@ AI Review Scene for Equal Reality & People Tech Revolution Projects
 
 Equal Reality Review AI is licensed under [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/), which allows you to copy and redistribute the material in any medium or format with unlimited allowance for adaptation and transformation. 
 
-Equal Reality must be properly credited, a link to the license provided within the material itself, the changes made are properly indicated, and the edited material is likewise distributed under the same license.
+Equal Reality must be properly credited, a link to the license provided within the material itself, the changes made properly indicated, and the edited material likewise distributed under the same license.
 
 More details are available in the above link.
 
